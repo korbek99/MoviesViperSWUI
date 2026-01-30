@@ -10,7 +10,7 @@ import UIKit
 protocol webServicesTopRatesProtocol {
     func getArticles( completion: @escaping ([Result]?) -> ())
 }
-class webServicesTopRates: BaseService  {
+class webServicesTopRates: BaseService , webServicesTopRatesProtocol {
     var urlbase:String = ""
     func getArticles( completion: @escaping ([Result]?) -> ()) {
         

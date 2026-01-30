@@ -10,7 +10,7 @@ import UIKit
 protocol WebServicesPopularProtocol {
     func getArticles( completion: @escaping ([Result]?) -> ())
 }
-class webServicesPopular: BaseService {
+class webServicesPopular: BaseService ,WebServicesPopularProtocol {
     var urlbase:String = ""
     func getArticles( completion: @escaping ([Result]?) -> ()) {
         

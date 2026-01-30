@@ -10,18 +10,14 @@ import SwiftUI
 struct HomeView: View {
     var body: some View {
         TabView {
-                  
-            MoviePopularView()
+            MovieRouter.createModule()
                 .tabItem {
                     Label("Popular", systemImage: "popcorn.fill")
                 }
-
-    
-            MovieTopRatesView()
+            MovieRouterTop.createModuleTop()
                 .tabItem {
                     Label("Top Rated", systemImage: "star.fill")
                 }
-
 
             ProfileView()
                 .tabItem {
@@ -31,6 +27,7 @@ struct HomeView: View {
     }
 }
 
+// MARK: - Profile View 
 struct ProfileView: View {
     var body: some View {
         NavigationStack {
@@ -40,7 +37,7 @@ struct ProfileView: View {
     }
 }
 
+// MARK: - Preview
 #Preview {
     HomeView()
 }
-
